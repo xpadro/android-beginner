@@ -7,17 +7,26 @@
     <ImageView
         android:src="@drawable/androidparty"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"/>
 
     <TextView
-        android:text="Happy Birthday YOURFRIENDHERE"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-
-    <TextView
+        android:text="Happy Birthday Friend!"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="From Xavi"
+        android:textSize="36sp"
+        android:fontFamily="sans-serif-light"
+        android:textColor="@android:color/white"
+        android:layout_margin="20dp"/>
+
+    <TextView
+        android:text="From, Xavi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"/>
+        android:layout_alignParentRight="true"
+        android:textSize="36sp"
+        android:fontFamily="sans-serif-light"
+        android:textColor="@android:color/white"
+        android:layout_margin="20dp"/>
 </RelativeLayout>
