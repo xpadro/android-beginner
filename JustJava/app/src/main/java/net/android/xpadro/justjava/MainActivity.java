@@ -3,6 +3,8 @@ package net.android.xpadro.justjava;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import java.text.NumberFormat;
@@ -52,8 +54,23 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private String createOrderSummary() {
+        CheckBox whippedCreamCheckBox = (CheckBox) findViewById(R.id.cream_checkbox);
+        boolean hasWhippedCream = whippedCreamCheckBox.isChecked();
+
+        CheckBox chocolateCheckBox = (CheckBox) findViewById(R.id.chocolate_checkbox);
+        boolean hasChocolate = chocolateCheckBox.isChecked();
+
+        EditText nameInput = (EditText) findViewById(R.id.input_name_view);
+        String name = nameInput.getText().toString();
+
         String price = calculatePrice();
-        return "Name: Xavi Padro\nQuantity: " + quantity + "\nTotal: " + price + "\nThank you!";
+
+        return "Name: " + name + "\n" +
+                "Add whipped cream? " + hasWhippedCream + "\n" +
+                "Add Chocolate? " + hasChocolate + "\n" +
+                "Quantity: " + quantity + "\n" +
+                "Total: " + price + "\n" +
+                "Thank you!";
     }
 
     /**
