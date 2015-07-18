@@ -31,7 +31,6 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
         displayQuantity(++quantity);
-        displayPrice(calculatePrice());
     }
 
     public void decrement(View view) {
@@ -40,7 +39,6 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
         displayQuantity(--quantity);
-        displayPrice(calculatePrice());
     }
 
     public void submitOrder(View view) {
@@ -54,14 +52,6 @@ public class MainActivity extends AppCompatActivity {
         TextView quantityTextView = (TextView) findViewById(
                 R.id.quantity_text_view);
         quantityTextView.setText("" + number);
-    }
-
-    /**
-     * This method displays the given price on the screen.
-     */
-    private void displayPrice(String price) {
-        TextView priceTextView = (TextView) findViewById(R.id.order_summary_text_view);
-        priceTextView.setText(price);
     }
 
     private String createOrderSummary() {
